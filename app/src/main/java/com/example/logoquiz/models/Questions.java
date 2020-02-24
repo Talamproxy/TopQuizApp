@@ -2,20 +2,23 @@ package com.example.logoquiz.models;
 
 import java.util.List;
 
+
+
+
+
 public class Questions {
 
     private String questions;
-    private List<String> choiceList;
-    private int questionsIndex;
+   private List<String> choiceList;
 
-    public Questions(String question, List<String> choiceList, int questionIndex) {
-        this.setQuestions(question);
-        this.setChoiceList(choiceList);
-        this.setQuestionsIndex(questionIndex);
+//question name, question choices, index answer
+    public Questions(String questions, List<String> choiceList, int questionsIndex) {
+        this.questions = questions;
+        this.choiceList = choiceList;
+        this.questionsIndex = questionsIndex;
     }
 
-
-    public String getQuestions() {
+   public String getQuestions() {
         return questions;
     }
 
@@ -27,7 +30,7 @@ public class Questions {
         return choiceList;
     }
 
-    public void setChoiceList(List<String> choiceList) {
+   public void setChoiceList(List<String> choiceList) {
         this.choiceList = choiceList;
     }
 
@@ -38,4 +41,8 @@ public class Questions {
     public void setQuestionsIndex(int questionsIndex) {
         this.questionsIndex = questionsIndex;
     }
+
+    private int questionsIndex;
+
+
 }
